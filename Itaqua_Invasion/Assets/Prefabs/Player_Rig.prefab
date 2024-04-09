@@ -267,6 +267,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7667978654527674447, guid: 44b88c902d08f084782b04baa7388c0b, type: 3}
+      propertyPath: Lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667978654527674447, guid: 44b88c902d08f084782b04baa7388c0b, type: 3}
+      propertyPath: Lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 2237158122630704117}
+    - target: {fileID: 7667978654527674447, guid: 44b88c902d08f084782b04baa7388c0b, type: 3}
+      propertyPath: Lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1213261562227759450}
+    - target: {fileID: 7667978654527674447, guid: 44b88c902d08f084782b04baa7388c0b, type: 3}
+      propertyPath: imputActions.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667978654527674447, guid: 44b88c902d08f084782b04baa7388c0b, type: 3}
+      propertyPath: imputActions.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 6a08e5c0-5a54-43a6-8d1c-837e341542a2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667978654527674447, guid: 44b88c902d08f084782b04baa7388c0b, type: 3}
+      propertyPath: imputActions.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/space
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667978654527674447, guid: 44b88c902d08f084782b04baa7388c0b, type: 3}
+      propertyPath: imputActions.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Imput Actions
+      objectReference: {fileID: 0}
     - target: {fileID: 9123949745215664978, guid: 44b88c902d08f084782b04baa7388c0b, type: 3}
       propertyPath: m_Name
       value: Player_Ship
@@ -277,6 +305,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44b88c902d08f084782b04baa7388c0b, type: 3}
+--- !u!1 &1213261562227759450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 638332082081388760, guid: 44b88c902d08f084782b04baa7388c0b, type: 3}
+  m_PrefabInstance: {fileID: 1733201221521162626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2237158122630704117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 506208721056213623, guid: 44b88c902d08f084782b04baa7388c0b, type: 3}
+  m_PrefabInstance: {fileID: 1733201221521162626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5644360014112866047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6222104230603751293, guid: 44b88c902d08f084782b04baa7388c0b, type: 3}

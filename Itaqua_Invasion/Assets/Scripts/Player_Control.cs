@@ -7,34 +7,46 @@ public class Player_Control : MonoBehaviour
 {
     float yThrow;
     float xThrow;
-    
 
-    [SerializeField] InputAction movement;
-    [SerializeField] float controlSpeed = 20f;
-    [SerializeField] float xRange = 10f;
-    [SerializeField] float yRange = 7f;
-
-    [SerializeField] float positionPitchFactor = -2f;
-    [SerializeField] float controlPitchFact = -10f;
-    [SerializeField] float positionYawFactor = 2f;
-    [SerializeField] float controlRollFact = -20f;
-
-    [SerializeField] float lerpSpeed = .1f;
+    float fire = 1f;
 
     Vector2 curentImputVector;
     Vector2 smoothImputVelocity;
 
-    
+    [Header ("Imput Settings")]
+    [SerializeField] InputAction movement;
+    [SerializeField] InputAction imputActions;
 
+
+    [Header("General Setup Settings")]
+    [Tooltip("How fast ship moves up and down based upon player input")]
+    [SerializeField] float controlSpeed = 20f;
+    [Tooltip("How far player moves horizontally")][SerializeField] float xRange = 10f;
+    [Tooltip("How far player moves vertically")][SerializeField] float yRange = 7f;
+
+    [Header("Laser gun array")]
+    [Tooltip("Add all player lasers here")]
+    [SerializeField] GameObject[] Lasers;
+
+    [Header("Screen position based tuning")]
+    [SerializeField] float positionPitchFactor = -2f;  
+    [SerializeField] float positionYawFactor = 2f;
+
+    [Header("Player input based tuning")]
+    [SerializeField] float controlPitchFact = -10f;
+    [SerializeField] float controlRollFact = -20f;
+    [SerializeField] float lerpSpeed = .1f;
 
     void OnEnable()
     {
         movement.Enable();
+        imputActions.Enable();
     }
 
     void OnDisable()
     {
         movement.Disable();
+        imputActions.Disable();
     }
 
     void Start()
@@ -47,7 +59,8 @@ public class Player_Control : MonoBehaviour
     {
         ProcessTranslation();
         ProcessRotation();
-       // SmoothControler();
+        ProcessFire();
+        // SmoothControler();     
     }
 
     void SmoothControler()
@@ -89,4 +102,32 @@ public class Player_Control : MonoBehaviour
 
         transform.localPosition = new Vector3(clampXPos, clampYPos, transform.localPosition.z);
     }
+
+    void ProcessFire()
+    {
+        fire = imputActions.ReadValue<float>();
+
+        if (imputActions.IsPressed())
+        {
+            ActivateLasers(true);
+            
+        }
+        else
+        {
+            ActivateLasers(false);
+        }
+
+    }
+
+    void ActivateLasers(bool isActive)
+    {       
+            foreach (GameObject laser in Lasers)
+            {
+                laser.SetActive(true);
+
+                var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+                emissionModule.enabled = isActive;
+            }             
+    }
+        
 }
