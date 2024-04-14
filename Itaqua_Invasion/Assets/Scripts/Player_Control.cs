@@ -86,7 +86,7 @@ public class Player_Control : MonoBehaviour
         transform.localRotation = Quaternion.Lerp(transform.localRotation, targetRotation, Time.deltaTime * lerpSpeed);
     }
 
-    void ProcessTranslation()
+    public void ProcessTranslation()
     {
         xThrow = movement.ReadValue<Vector2>().x;
         yThrow = movement.ReadValue<Vector2>().y;
