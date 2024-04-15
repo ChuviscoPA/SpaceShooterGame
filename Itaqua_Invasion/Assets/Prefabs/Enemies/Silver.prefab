@@ -495,6 +495,7 @@ GameObject:
   - component: {fileID: 3386285061308571486}
   - component: {fileID: 8913473997508475297}
   - component: {fileID: 9146515884170354328}
+  - component: {fileID: 5527562652193130231}
   m_Layer: 0
   m_Name: Silver
   m_TagString: Untagged
@@ -580,11 +581,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f386f962b4032fd4bbe98e72271d7b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeathVFX: {fileID: 7944772545688800214, guid: f6f2b1339c1b6d34cbd1620132cda91f, type: 3}
+  DeathFX: {fileID: 7944772545688800214, guid: f6f2b1339c1b6d34cbd1620132cda91f, type: 3}
   HitVFX: {fileID: 2830992376429327691, guid: 85da271cb4d02bf40bc939fe2469962e, type: 3}
   parent: {fileID: 0}
   scorePerHit: 80
+  scorePerKill: 30
   life: 16
+--- !u!65 &5527562652193130231
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4457961325924217760}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.008005, y: 5.232236, z: 13.0688305}
+  m_Center: {x: 0, y: -0.000000834465, z: 0.000015497208}
 --- !u!1 &5099092583695497418
 GameObject:
   m_ObjectHideFlags: 0

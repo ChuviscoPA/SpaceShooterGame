@@ -1248,6 +1248,7 @@ GameObject:
   - component: {fileID: 6093243441093204548}
   - component: {fileID: 1507410226046509668}
   - component: {fileID: 3308160203464909797}
+  - component: {fileID: 8690243895273667821}
   m_Layer: 0
   m_Name: Birdou_Blue
   m_TagString: Untagged
@@ -1333,11 +1334,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f386f962b4032fd4bbe98e72271d7b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeathVFX: {fileID: 7944772545688800214, guid: f6f2b1339c1b6d34cbd1620132cda91f, type: 3}
+  DeathFX: {fileID: 7944772545688800214, guid: f6f2b1339c1b6d34cbd1620132cda91f, type: 3}
   HitVFX: {fileID: 2830992376429327691, guid: 85da271cb4d02bf40bc939fe2469962e, type: 3}
   parent: {fileID: 0}
   scorePerHit: 30
+  scorePerKill: 30
   life: 6
+--- !u!65 &8690243895273667821
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5715953835826349552}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.085112, y: 2.8066294, z: 10.785946}
+  m_Center: {x: 0, y: -0.00000071525574, z: -0.000006914139}
 --- !u!1 &6053631026676916457
 GameObject:
   m_ObjectHideFlags: 0

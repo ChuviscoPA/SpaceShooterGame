@@ -6,12 +6,14 @@ using UnityEngine.InputSystem;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] GameObject DeathVFX;
+    [SerializeField] GameObject DeathFX;
     [SerializeField] GameObject HitVFX;
     GameObject ScoreTag;
 
     [SerializeField] Transform parent;
     [SerializeField] int scorePerHit = 15;
+    [SerializeField] int scorePerKill = 30;
+
     [SerializeField] int life = 2;
 
     ScoreBoard scoreBoard;
@@ -57,8 +59,10 @@ public class Enemy : MonoBehaviour
         
         if (life < 1)
         {
-            GameObject vfx = Instantiate(DeathVFX, transform.position, Quaternion.identity);
+            GameObject vfx = Instantiate(DeathFX, transform.position, Quaternion.identity);
             vfx.transform.parent = ScoreTag.transform;
+            scoreBoard.IncreaseScore(scorePerKill);
+            
 
             Destroy(gameObject);
         }
